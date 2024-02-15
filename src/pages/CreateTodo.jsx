@@ -6,15 +6,17 @@ import { Link } from "react-router-dom"
 const CreateTodoPage = () => {
    
     const [value, setValue] = useState('')
+    // const [isCompleted, setIsCompleted] = useState(false)
+
 
 
     const dispatch = useDispatch()
     const onSubmit = (e) => {
     e.preventDefault()
- 
-    dispatch(addTodoAction(value))
+   dispatch(addTodoAction(value))
     console.log(value);
     setValue('')
+    // setIsCompleted(false)
 
    }
 

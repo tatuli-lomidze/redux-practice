@@ -10,13 +10,14 @@ export const todoReducer = (state = initialState, action) => {
         } 
         case 'DELETE_TODO':
         return {
-            todoList: state.todoList.filter(todo => todo !== action.payload)
+            ...state,
+            todoList: state.todoList.filter(todo => todo.id !== action.payload)
         }
         case 'TOGGLE_TODO':
     return {
         ...state,
         todoList: state.todoList.map(todo =>
-            todo.id === action.payload ? { ...todo, done: !todo.done } : todo
+            todo.id === action.payload ? { ...todo, done: true } : todo
         )
     }
         default: 

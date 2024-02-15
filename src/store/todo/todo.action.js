@@ -6,14 +6,14 @@ export const addTodoAction = (payload) => {
     }
 }
 
-export const deleteTodoAction = (payload) => {
+export const deleteTodoAction = (id) => {
     return {
         type: 'DELETE_TODO',
-        payload
+        payload: id,
     }
 }
 
-export const toggleTodoAction = (payload) => ({
+export const toggleTodoAction = (id) => ({
     type: 'TOGGLE_TODO',
-    payload
+    payload: id,
 })
