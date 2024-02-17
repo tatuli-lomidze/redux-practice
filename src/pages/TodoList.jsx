@@ -23,7 +23,7 @@ const TodoListPage = () => {
         <div>
             <h1>Todo List</h1>
             {todoList.map((todo) => (
-                <div key={todo.id}>
+                <div key={todo}>
                     <p>{todo}</p>
                     <button onClick={() => handleDelete(todo.id)}>Delete</button>
                     <button onClick={() => handleToggle(todo.id)}>Done</button>

@@ -2,7 +2,6 @@ import CreateTodoPage from "../pages/CreateTodo"
 import DoneTodos from "../pages/DoneTodo"
 import TodoListPage from "../pages/TodoList"
 
-
 const routes = [
     {
         element: <CreateTodoPage/>,
